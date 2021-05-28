@@ -67,8 +67,9 @@ if (typeof AudioContext === 'undefined') {
     }
 }
 
+// Steven : commenting out as this might be negatively impacting NextJS SSR
 /*jshint -W079 */
-var URL = window.URL;
+// var URL = window.URL;
 
 if (typeof URL === 'undefined' && typeof webkitURL !== 'undefined') {
     /*global URL:true */

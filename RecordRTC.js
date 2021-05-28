@@ -1,6 +1,7 @@
 'use strict';
 
-// Last time updated: 2021-03-09 3:20:22 AM UTC
+// Last time updated: 2021-05-28 19:11:03 UTC
+// Fork to fix NextJS issue "TypeError: URL is not a constructor" bug
 
 // ________________
 // RecordRTC v5.6.2
@@ -1729,8 +1730,9 @@ if (typeof AudioContext === 'undefined') {
     }
 }
 
-/*jshint -W079 */
-var URL = window.URL;
+// Steven : commenting this out as it is negatively impacting NextJS's SSR
+// var URL = window.URL;
+
 
 if (typeof URL === 'undefined' && typeof webkitURL !== 'undefined') {
     /*global URL:true */
